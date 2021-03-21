@@ -1,0 +1,14 @@
+<h2>Style Binding</h2>
+
+<h2 style="color: red;">Normal Style(static)</h2>
+
+<h2 [style.color]="'green'">Normal Style binding(static)</h2>
+
+<h2 [style.color]="'cyan'">Normal binding(static)</h2>
+
+<h2 [style.color]="color">Normal Style binding(dynamic)</h2>
+
+<button (click)="changeColor()">Change Color</button>
+<br><br>
+<h3>Conditional Binding</h3>
+<h2 [style.color]="err?'red':'green'">Conditional Binding</h2>
