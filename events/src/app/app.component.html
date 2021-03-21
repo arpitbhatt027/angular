@@ -1,0 +1,18 @@
+<h2>Events Demo</h2>
+
+<button (click)="myFunction('click event')">Click for event</button> <br><br>
+Keyup<input type="text" (keyup)="myFunction('key up event')" /> <br><br>
+Get input value<input type="text" #inputId (keyup)="myFunction(inputId.value)" /> <br><br>
+Get input value on enter<input type="text" #name (keyup.enter)="myFunction(name.value)" /> <br><br>
+Get input value on space<input type="text" #inputId1 (keyup.space)="myFunction(inputId1.value)" /> <br><br>
+Key down (get call before type)<input type="text" #inputId2 (keydown)="myFunction(inputId2.value)" /> <br><br>
+
+<div
+(mouseover)="myFunction('mouse over')"
+style="background-color: aquamarine;">
+Mouse Over</div><br><br>
+
+<div
+(mouseleave)="myFunction('mouse leave')"
+style="background-color: aquamarine;">
+Mouse Leave</div><br><br>
