@@ -1,0 +1,46 @@
+<h1>If, Switch and Loop</h1>
+
+<ng-template [ngIf]="coding == 'java'">
+  <h1>Java</h1>
+</ng-template>
+
+<ng-template [ngIf]="coding == 'c++'">
+  <h1>C++</h1>
+</ng-template>
+
+<ng-template [ngIf]="coding == 'node'">
+  <h1>Node JS</h1>
+</ng-template>
+---------------------------------------------------
+<h2>Switch Results</h2>
+<div [ngSwitch]="colorName">
+  <h2 style="color: red;" *ngSwitchCase="'red'">
+    Red
+  </h2>
+  <h2 style="color: blue;" *ngSwitchCase="'blue'">
+    Blue
+  </h2>
+  <h2 style="color: green" *ngSwitchCase="'green'">
+    Green
+  </h2>
+</div>
+---------------------------------------------------
+<h2>Loop - iterate array</h2>
+<h3 *ngFor="let student of studentList">
+  {{student}}
+</h3>
+---------------------------------------------------
+<h2>Loop - iterate data from json object</h2>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Email</th>
+  </tr>
+
+  <tr *ngFor = "let employee of employees">
+    <td>{{employee.name}}</td>
+    <td>{{employee.age}}</td>
+    <td>{{employee.email}}</td>
+  </tr>
+</table>
